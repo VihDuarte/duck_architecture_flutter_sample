@@ -7,8 +7,8 @@ import 'package:rxdart/rxdart.dart';
 
 class HomeScreenView extends StatelessWidget with HomeScreenViewContract {
   final CounterContainer _counterContainer;
-  final IncreaseContainer _increaseContainer;
-  final DecreaseContainer _decreaseContainer;
+  final IncreaseButtonContainer _increaseContainer;
+  final DecreaseButtonContainer _decreaseContainer;
 
   final _onDetailClickSubject = BehaviorSubject<void>();
 

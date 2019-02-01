@@ -1,12 +1,12 @@
 import 'package:duck_architecture_sample/core/actions.dart';
 import 'package:duck_architecture_sample/core/boundaries/counter_input_boundary.dart';
-import 'package:duck_architecture_sample/presentation/duck_navigator.dart';
+import 'package:duck_architecture_sample/presentation/counter_navigator.dart';
 
-class Coordinator {
+class CounterCoordinator {
   final CounterInputBoundary _inputBoundary;
-  final DuckNavigator _navigator;
+  final CounterNavigator _navigator;
 
-  Coordinator(this._inputBoundary, this._navigator);
+  CounterCoordinator(this._inputBoundary, this._navigator);
 
   void dispatch(Action action) {
     switch (action.runtimeType) {

@@ -1,7 +1,7 @@
-import 'package:duck_architecture_sample/presentation/duck_navigator.dart';
+import 'package:duck_architecture_sample/presentation/counter_navigator.dart';
 import 'package:flutter/material.dart';
 
-class FlutterNavigator extends DuckNavigator {
+class FlutterNavigator extends CounterNavigator {
   final BuildContext _context;
 
   FlutterNavigator(this._context);
