@@ -1,5 +1,5 @@
-import 'package:duck_architecture_sample/presentation/blocks/presenter.dart';
 import 'package:flutter/material.dart';
+import 'package:counter_base/counter_base.dart';
 
 abstract class DuckContainer<P extends Presenter, V extends Widget>
     extends StatelessWidget {

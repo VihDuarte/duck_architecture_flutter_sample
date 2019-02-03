@@ -1,6 +1,6 @@
-import 'package:duck_architecture_sample/flutter/providers/boundaries_provider.dart';
-import 'package:duck_architecture_sample/flutter/providers/navigator_provider.dart';
-import 'package:duck_architecture_sample/presentation/counter_coordinator.dart';
+import 'package:counter_base/counter_base.dart';
+import 'package:counter_flutter/src/providers/boundaries_provider.dart';
+import 'package:counter_flutter/src/providers/navigator_provider.dart';
 import 'package:flutter/material.dart';
 
 class CoordinatorProvider {

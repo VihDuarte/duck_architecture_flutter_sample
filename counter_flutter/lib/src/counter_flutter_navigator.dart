@@ -1,5 +1,5 @@
-import 'package:duck_architecture_sample/presentation/counter_navigator.dart';
 import 'package:flutter/material.dart';
+import 'package:counter_base/counter_base.dart';
 
 class FlutterNavigator extends CounterNavigator {
   final BuildContext _context;

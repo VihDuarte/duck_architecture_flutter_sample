@@ -1,7 +1,5 @@
-import 'package:duck_architecture_sample/presentation/blocks/counter/counter_view_model.dart';
-import 'package:duck_architecture_sample/presentation/blocks/view_contract.dart';
 import 'package:flutter/material.dart';
-import 'package:duck_architecture_sample/presentation/blocks/counter/counter_view_contract.dart';
+import 'package:counter_base/counter_base.dart';
 
 class CounterView extends StatelessWidget
     with ViewContract<CounterViewModel>, CounterViewContract {

@@ -10,7 +10,7 @@ class DetailScreenView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('DUCK Archicture POC Detail'),
+        title: Text('DUCK Archicture POC - counter detail'),
       ),
       body: Center(
         child: _counterContainer,

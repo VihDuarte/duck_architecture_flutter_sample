@@ -1,4 +1,4 @@
-import 'package:duck_architecture_sample/presentation/blocks/decreasebutton/decrease_button_view_contract.dart';
+import 'package:counter_base/counter_base.dart';
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
 

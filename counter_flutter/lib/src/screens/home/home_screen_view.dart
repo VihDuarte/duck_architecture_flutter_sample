@@ -1,7 +1,7 @@
-import 'package:duck_architecture_sample/flutter/containers/counter/counter_container.dart';
-import 'package:duck_architecture_sample/flutter/containers/decreasebutton/decrease_button_container.dart';
-import 'package:duck_architecture_sample/flutter/containers/increasebutton/increase_button_container.dart';
-import 'package:duck_architecture_sample/presentation/screen/home/home_screen_view_contract.dart';
+import 'package:counter_base/counter_base.dart';
+import 'package:counter_flutter/src/containers/counter/counter_container.dart';
+import 'package:counter_flutter/src/containers/decreasebutton/decrease_button_container.dart';
+import 'package:counter_flutter/src/containers/increasebutton/increase_button_container.dart';
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
 
@@ -25,7 +25,7 @@ class HomeScreenView extends StatelessWidget with HomeScreenViewContract {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('DUCK Archicture POC'),
+        title: Text('DUCK Archicture POC - counter'),
       ),
       floatingActionButton: Column(
         mainAxisSize: MainAxisSize.min,

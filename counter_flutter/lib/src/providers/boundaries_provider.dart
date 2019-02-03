@@ -1,7 +1,5 @@
-import 'package:duck_architecture_sample/core/boundaries/counter_input_boundary.dart';
-import 'package:duck_architecture_sample/core/boundaries/counter_output_boundary.dart';
-import 'package:duck_architecture_sample/core/usecase/counter_use_case.dart';
-import 'package:duck_architecture_sample/flutter/providers/gateway_provider.dart';
+import 'package:counter_base/counter_base.dart';
+import 'package:counter_flutter/src/providers/gateway_provider.dart';
 
 class BoundariesProvider {
   static CounterUseCase _counterUseCase;

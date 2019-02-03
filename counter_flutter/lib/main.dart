@@ -1,7 +1,7 @@
-import 'package:duck_architecture_sample/flutter/providers/coordinator_provider.dart';
-import 'package:duck_architecture_sample/flutter/providers/screen_container_provider.dart';
-import 'package:duck_architecture_sample/flutter/providers/widget_container_provider.dart';
-import 'package:duck_architecture_sample/flutter/screens/detail/detail_screen_view.dart';
+import 'package:counter_flutter/src/providers/coordinator_provider.dart';
+import 'package:counter_flutter/src/providers/screen_container_provider.dart';
+import 'package:counter_flutter/src/providers/widget_container_provider.dart';
+import 'package:counter_flutter/src/screens/detail/detail_screen_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {

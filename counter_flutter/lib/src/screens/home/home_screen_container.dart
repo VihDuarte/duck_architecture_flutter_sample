@@ -1,6 +1,6 @@
-import 'package:duck_architecture_sample/flutter/containers/container.dart';
-import 'package:duck_architecture_sample/flutter/screens/home/home_screen_view.dart';
-import 'package:duck_architecture_sample/presentation/screen/home/home_screen_presenter.dart';
+import 'package:counter_base/counter_base.dart';
+import 'package:counter_flutter/src/containers/container.dart';
+import 'package:counter_flutter/src/screens/home/home_screen_view.dart';
 
 class HomeScreenContainer extends DuckContainer<HomeScreenPresenter, HomeScreenView> {
   HomeScreenContainer(HomeScreenView view, HomeScreenPresenter presenter)

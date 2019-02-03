@@ -1,4 +1,4 @@
-import 'package:duck_architecture_sample/data/gateway/counter_gateway.dart';
+import 'package:counter_base/counter_base.dart';
 
 class GatewayProvider {
   static CounterGateway _counterGateway;

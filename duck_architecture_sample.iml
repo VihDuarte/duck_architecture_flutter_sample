@@ -9,6 +9,9 @@
       <excludeFolder url="file://$MODULE_DIR$/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/build" />
+      <excludeFolder url="file://$MODULE_DIR$/counter_base/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/counter_base/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/counter_base/build" />
       <excludeFolder url="file://$MODULE_DIR$/counter_flutter/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/counter_flutter/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/counter_flutter/build" />

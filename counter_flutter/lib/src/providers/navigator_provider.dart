@@ -1,5 +1,5 @@
-import 'package:duck_architecture_sample/src/counter_flutter_navigator.dart';
-import 'package:duck_architecture_sample/presentation/counter_navigator.dart';
+import 'package:counter_base/counter_base.dart';
+import 'package:counter_flutter/src/counter_flutter_navigator.dart';
 import 'package:flutter/material.dart';
 
 class NavigatorProvider  {
