@@ -1,0 +1,12 @@
+name: counter_base
+description: The Business Logic Counter App
+
+environment:
+  sdk: '>=2.0.0-dev.28.0 <3.0.0'
+
+dependencies:
+  rxdart: 0.18.0
+
+dev_dependencies:
+  test: ^1.3.0
+  mockito: ^3.0.0
