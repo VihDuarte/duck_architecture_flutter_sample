@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:counter_base/counter_base.dart';
 
-class FlutterNavigator extends CounterNavigator {
+class FlutterNavigator implements CounterNavigator {
   final BuildContext _context;
 
   FlutterNavigator(this._context);

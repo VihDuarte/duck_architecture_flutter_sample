@@ -25,22 +25,13 @@ class App extends StatelessWidget {
   Route _homeScreen() {
     return MaterialPageRoute(
       builder: (context) {
-        return ScreenContainerProvider.getHomeScreenContainer(context);
+        return CounterCoordinator.initHome(context);
       },
     );
   }
 
   Route _detailScreen() {
     return MaterialPageRoute(
-      builder: (context) {
-        final dispatcher =
-            CoordinatorProvider.counterCoordinator(context).dispatch;
-
-        return DetailScreenView(
-          WidgetContainerProvider.getCounterContainer(),
-          WidgetContainerProvider.getIncreaseButtonContainer(dispatcher),
-        );
-      },
-    );
+        builder: (context) => CounterCoordinator.initDetail());
   }
 }

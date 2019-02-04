@@ -1,20 +1,19 @@
 import 'package:counter_base/counter_base.dart';
-import 'package:counter_flutter/src/providers/gateway_provider.dart';
 
 class BoundariesProvider {
   static CounterUseCase _counterUseCase;
 
-  static CounterInputBoundary getCounterInputBoundary() {
-    return _getCounterUseCase();
+  static CounterInputBoundary getCounterInputBoundary(CounterGatewayContract counterGateway) {
+    return _getCounterUseCase(counterGateway);
   }
 
-  static CounterOutputBoundary getCounterOutputBoundary() {
-    return _getCounterUseCase();
+  static CounterOutputBoundary getCounterOutputBoundary(CounterGatewayContract counterGateway) {
+    return _getCounterUseCase(counterGateway);
   }
 
-  static CounterUseCase _getCounterUseCase() {
+  static CounterUseCase _getCounterUseCase(CounterGatewayContract counterGateway) {
     if (_counterUseCase == null) {
-      _counterUseCase = CounterUseCase(GatewayProvider.getCounterGateway());
+      _counterUseCase = CounterUseCase(counterGateway);
     }
     return _counterUseCase;
   }

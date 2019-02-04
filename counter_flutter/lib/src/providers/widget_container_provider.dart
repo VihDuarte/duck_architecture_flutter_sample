@@ -8,20 +8,25 @@ import 'package:counter_flutter/src/containers/increasebutton/increase_button_vi
 import 'package:counter_flutter/src/providers/boundaries_provider.dart';
 
 class WidgetContainerProvider {
-  static CounterContainer getCounterContainer() => CounterContainer(
+  static CounterContainer getCounterContainer(
+    CounterOutputBoundary boundary,
+  ) =>
+      CounterContainer(
         CounterView(),
-        CounterPresenter(BoundariesProvider.getCounterOutputBoundary()),
+        CounterPresenter(boundary),
       );
 
   static DecreaseButtonContainer getDecreaseButtonContainer(
-          Function(Action) dispatcher) =>
+    Function(Action) dispatcher,
+  ) =>
       DecreaseButtonContainer(
         DecreaseButtonView(),
         DecreaseButtonPresenter(dispatcher),
       );
 
   static IncreaseButtonContainer getIncreaseButtonContainer(
-          Function(Action) dispatcher) =>
+    Function(Action) dispatcher,
+  ) =>
       IncreaseButtonContainer(
         IncreaseButtonView(),
         IncreaseButtonPresenter(dispatcher),

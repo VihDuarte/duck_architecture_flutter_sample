@@ -26,7 +26,4 @@ class CounterView extends StatelessWidget
   void dispose() {
     viewModelSubject.close();
   }
-
-  @override
-  void test() {}
 }

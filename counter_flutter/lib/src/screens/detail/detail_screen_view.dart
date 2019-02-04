@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
 class DetailScreenView extends StatelessWidget {
-  final Widget _counterContainer;
-  final Widget _increaseContainer;
+  final Widget counterContainer;
+  final Widget increaseButtonContainer;
 
-  DetailScreenView(this._counterContainer, this._increaseContainer);
+  DetailScreenView({
+    this.counterContainer,
+    this.increaseButtonContainer,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +16,9 @@ class DetailScreenView extends StatelessWidget {
         title: Text('DUCK Archicture POC - counter detail'),
       ),
       body: Center(
-        child: _counterContainer,
+        child: counterContainer,
       ),
-      floatingActionButton: _increaseContainer,
+      floatingActionButton: increaseButtonContainer,
     );
   }
 }

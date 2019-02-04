@@ -6,20 +6,20 @@ import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
 
 class HomeScreenView extends StatelessWidget with HomeScreenViewContract {
-  final CounterContainer _counterContainer;
-  final IncreaseButtonContainer _increaseContainer;
-  final DecreaseButtonContainer _decreaseContainer;
+  final Widget counterContainer;
+  final Widget increaseContainer;
+  final Widget decreaseContainer;
 
   final _onDetailClickSubject = BehaviorSubject<void>();
 
   @override
   Observable<Object> onDetailClick() => _onDetailClickSubject;
 
-  HomeScreenView(
-    this._counterContainer,
-    this._increaseContainer,
-    this._decreaseContainer,
-  );
+  HomeScreenView({
+    this.counterContainer,
+    this.increaseContainer,
+    this.decreaseContainer,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -31,15 +31,15 @@ class HomeScreenView extends StatelessWidget with HomeScreenViewContract {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: <Widget>[
-          _increaseContainer,
+          increaseContainer,
           Container(margin: EdgeInsets.only(top: 12.0)),
-          _decreaseContainer,
+          decreaseContainer,
         ],
       ),
       body: Center(
         child: Column(
           children: <Widget>[
-            _counterContainer,
+            counterContainer,
             RaisedButton(
               child: Text("DETAIL"),
               onPressed: () => _onDetailClickSubject.add(Object),

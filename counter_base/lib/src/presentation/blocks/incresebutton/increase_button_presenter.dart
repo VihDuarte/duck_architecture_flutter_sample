@@ -2,7 +2,6 @@ import '../../../core/actions.dart';
 import '../presenter.dart';
 import 'increase_button_view_contract.dart';
 
-
 class IncreaseButtonPresenter extends Presenter<IncreaseButtonViewContract> {
   final Function(Action) _dispatcher;
 

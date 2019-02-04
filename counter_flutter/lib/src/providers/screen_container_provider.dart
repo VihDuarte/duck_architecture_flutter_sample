@@ -1,21 +1,39 @@
 import 'package:counter_base/counter_base.dart';
-import 'package:counter_flutter/src/providers/coordinator_provider.dart';
-import 'package:counter_flutter/src/providers/widget_container_provider.dart';
+import 'package:counter_flutter/src/containers/counter/counter_container.dart';
+import 'package:counter_flutter/src/containers/decreasebutton/decrease_button_container.dart';
+import 'package:counter_flutter/src/containers/increasebutton/increase_button_container.dart';
+import 'package:counter_flutter/src/screens/detail/detail_screen_container.dart';
+import 'package:counter_flutter/src/screens/detail/detail_screen_view.dart';
 import 'package:counter_flutter/src/screens/home/home_screen_container.dart';
 import 'package:counter_flutter/src/screens/home/home_screen_view.dart';
-import 'package:flutter/material.dart';
+import 'package:meta/meta.dart';
 
 class ScreenContainerProvider {
-  static HomeScreenContainer getHomeScreenContainer(BuildContext context) {
-    final dispatcher = CoordinatorProvider.counterCoordinator(context).dispatch;
-
+  static HomeScreenContainer getHomeScreenContainer({
+    @required CounterContainer counterContainer,
+    @required IncreaseButtonContainer increaseButtonContainer,
+    @required DecreaseButtonContainer decreaseButtonContainer,
+    @required Function(Action action) dispatcher,
+  }) {
     return HomeScreenContainer(
       HomeScreenView(
-        WidgetContainerProvider.getCounterContainer(),
-        WidgetContainerProvider.getIncreaseButtonContainer(dispatcher),
-        WidgetContainerProvider.getDecreaseButtonContainer(dispatcher),
+        counterContainer: counterContainer,
+        increaseContainer: increaseButtonContainer,
+        decreaseContainer: decreaseButtonContainer,
       ),
       HomeScreenPresenter(dispatcher),
+    );
+  }
+
+  static DetailScreenContainer getDetailScreenContainer({
+    @required CounterContainer counterContainer,
+    @required IncreaseButtonContainer increaseButtonContainer,
+  }) {
+    return DetailScreenContainer(
+      DetailScreenView(
+        counterContainer: counterContainer,
+        increaseButtonContainer: increaseButtonContainer,
+      ),
     );
   }
 }
