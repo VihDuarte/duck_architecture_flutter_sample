@@ -4,7 +4,7 @@ export 'src/core/actions.dart';
 export 'src/core/usecase/counter_use_case.dart';
 export 'src/core/boundaries/counter_input_boundary.dart';
 export 'src/core/boundaries/counter_output_boundary.dart';
-export 'src/gateway/counter_gateway.dart';
+export 'src/gateway/counter_gateway_contract.dart';
 export 'src/presentation/counter_coordinator.dart';
 export 'src/presentation/counter_navigator.dart';
 export 'src/presentation/blocks/counter/counter_presenter.dart';

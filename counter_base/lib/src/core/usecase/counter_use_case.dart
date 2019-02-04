@@ -1,12 +1,12 @@
 import 'package:rxdart/rxdart.dart';
 
-import '../../gateway/counter_gateway.dart';
+import '../../gateway/counter_gateway_contract.dart';
 import '../boundaries/counter_input_boundary.dart';
 import '../boundaries/counter_output_boundary.dart';
 
 class CounterUseCase extends CounterInputBoundary with CounterOutputBoundary {
   final _counterSubject = BehaviorSubject<int>();
-  final CounterGateway _counterGateway;
+  final CounterGatewayContract _counterGateway;
 
   CounterUseCase(this._counterGateway);
 

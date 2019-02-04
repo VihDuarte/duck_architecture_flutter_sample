@@ -1,4 +1,6 @@
-class CounterGateway {
+import 'package:counter_base/counter_base.dart';
+
+class CounterGatewayMemory extends CounterGatewayContract {
   int count = 0;
 
   Future<int> increaseCounter(int increase) {

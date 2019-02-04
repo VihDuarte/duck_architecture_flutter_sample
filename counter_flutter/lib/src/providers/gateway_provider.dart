@@ -1,12 +1,12 @@
-import 'package:counter_base/counter_base.dart';
+import 'package:counter_flutter/src/gateway/counter_gateway_memory.dart';
 
 class GatewayProvider {
-  static CounterGateway _counterGateway;
+  static CounterGatewayMemory _counterGatewayMemory;
 
-  static CounterGateway getCounterGateway() {
-    if (_counterGateway == null) {
-      _counterGateway = CounterGateway();
+  static CounterGatewayMemory getCounterGateway() {
+    if (_counterGatewayMemory == null) {
+      _counterGatewayMemory = CounterGatewayMemory();
     }
-    return _counterGateway;
+    return _counterGatewayMemory;
   }
 }
