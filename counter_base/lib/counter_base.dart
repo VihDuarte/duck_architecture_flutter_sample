@@ -28,5 +28,8 @@ export 'src/presentation/screen/home/home_screen_controller.dart';
 export 'src/presentation/screen/detail/detail_screen_dispatcher.dart';
 export 'src/presentation/screen/detail/detail_screen_controller.dart';
 
+export 'src/presentation/screen/first_bottom_card/first_bottom_card_presenter.dart';
+export 'src/presentation/screen/first_bottom_card/first_bottom_card_view_contract.dart';
+
 export 'src/presentation/blocks/presenter.dart';
 export 'src/presentation/blocks/view_contract.dart';

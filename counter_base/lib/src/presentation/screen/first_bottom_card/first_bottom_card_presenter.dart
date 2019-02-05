@@ -1,7 +1,6 @@
-import 'package:counter_base/src/presentation/blocks/first_bottom_card/first_bottom_card_view_contract.dart';
-
+import 'package:counter_base/src/presentation/blocks/presenter.dart';
+import 'package:counter_base/src/presentation/screen/first_bottom_card/first_bottom_card_view_contract.dart';
 import '../../../core/actions.dart';
-import '../presenter.dart';
 
 class FirstBottomCardPresenter extends Presenter<FirstBottomCardViewContract> {
   final Function(Action) _dispatcher;

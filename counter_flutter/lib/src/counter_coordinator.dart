@@ -1,3 +1,4 @@
+import 'package:counter_base/counter_base.dart';
 import 'package:counter_flutter/src/providers/boundaries_provider.dart';
 import 'package:counter_flutter/src/providers/controller_provider.dart';
 import 'package:counter_flutter/src/providers/coordinator_provider.dart';
@@ -5,6 +6,8 @@ import 'package:counter_flutter/src/providers/gateway_provider.dart';
 import 'package:counter_flutter/src/providers/navigator_provider.dart';
 import 'package:counter_flutter/src/providers/screen_container_provider.dart';
 import 'package:counter_flutter/src/providers/widget_container_provider.dart';
+import 'package:counter_flutter/src/screens/first_bottom_card/first_bottom_card_container.dart';
+import 'package:counter_flutter/src/screens/first_bottom_card/first_bottom_card_view.dart';
 import 'package:flutter/material.dart';
 
 class CounterCoordinator {
@@ -54,6 +57,17 @@ class CounterCoordinator {
       increaseButtonContainer: increaseButtonContainer,
       decreaseButtonContainer: decreaseButtonContainer,
       dispatcher: dispatcher,
+    );
+  }
+
+  static Widget initFirstBottomCard(BuildContext context) {
+    final Function(Action) _dispatcher = (Action action) {
+      print(action);
+    };
+
+    return FirstBottomCardContainer(
+      FirstBottomCardView(),
+      FirstBottomCardPresenter(_dispatcher),
     );
   }
 }

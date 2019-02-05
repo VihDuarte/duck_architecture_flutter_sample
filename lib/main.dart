@@ -11,6 +11,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: "Counter",
       onGenerateRoute: _routes,
+      debugShowCheckedModeBanner: false,
     );
   }
 
@@ -31,7 +32,15 @@ class App extends StatelessWidget {
   }
 
   Route _detailScreen() {
-    return MaterialPageRoute(
-        builder: (context) => CounterCoordinator.initDetail());
+    return PageRouteBuilder(
+      opaque: false,
+      pageBuilder: (
+        BuildContext context,
+        Animation<double> animation,
+        Animation<double> secondaryAnimation,
+      ) {
+        return CounterCoordinator.initFirstBottomCard(context);
+      },
+    );
   }
 }
