@@ -25,6 +25,33 @@ class FirstButtonCardViewState extends State<FirstBottomCardView>
   int index = 0;
   List<Widget> widgets = [];
 
+  Animation<double> upAnimation;
+  AnimationController upController;
+
+  @override
+  void initState() {
+    super.initState();
+
+    upController = AnimationController(
+      duration: Duration(milliseconds: 200),
+      vsync: this,
+    );
+
+    upAnimation = Tween(begin: 50.0, end: 200.0).animate(
+      CurvedAnimation(
+        parent: upController,
+        curve: Curves.easeIn,
+      ),
+    );
+
+    upAnimation.addStatusListener((AnimationStatus status) {
+      if (status == AnimationStatus.completed) {
+        index = (index + 1);
+        upController.reset();
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     widgets = [
@@ -43,7 +70,9 @@ class FirstButtonCardViewState extends State<FirstBottomCardView>
             Positioned(
               child: Align(
                 alignment: Alignment.center,
-                child: widgets[index],
+                child: Stack(
+                  children: widgets,
+                ),
               ),
             ),
             Positioned(
@@ -56,7 +85,11 @@ class FirstButtonCardViewState extends State<FirstBottomCardView>
                   ),
                   onPressed: () {
                     setState(() {
-                      index = (index + 1) % 3;
+                      if (index == 2) {
+                        widget._onFinishSubject.add(Object);
+                      } else {
+                        upController.forward();
+                      }
                     });
                   },
                 ),
@@ -69,15 +102,39 @@ class FirstButtonCardViewState extends State<FirstBottomCardView>
   }
 
   Widget _buildFirstCard() {
-    return _buildCard("First Card");
+    return AnimatedBuilder(
+      animation: upAnimation,
+      builder: (BuildContext context, Widget child) {
+        return Positioned(
+          bottom: upAnimation.value + index * 150,
+          child: _buildCard("First Card"),
+        );
+      },
+    );
   }
 
   Widget _buildSecondCard() {
-   return  _buildCard("Second Card");
+    return AnimatedBuilder(
+      animation: upAnimation,
+      builder: (BuildContext context, Widget child) {
+        return Positioned(
+          bottom: upAnimation.value + index * 150 - 150,
+          child: _buildCard("Second Card"),
+        );
+      },
+    );
   }
 
   Widget _buildThirdCard() {
-    return _buildCard("Third Card");
+    return AnimatedBuilder(
+      animation: upAnimation,
+      builder: (BuildContext context, Widget child) {
+        return Positioned(
+          bottom: upAnimation.value + index * 150 - 300,
+          child: _buildCard("Third Card"),
+        );
+      },
+    );
   }
 
   Widget _buildCard(String text) {

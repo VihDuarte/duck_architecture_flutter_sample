@@ -62,7 +62,7 @@ class CounterCoordinator {
 
   static Widget initFirstBottomCard(BuildContext context) {
     final Function(Action) _dispatcher = (Action action) {
-      print(action);
+      Navigator.pop(context);
     };
 
     return FirstBottomCardContainer(
