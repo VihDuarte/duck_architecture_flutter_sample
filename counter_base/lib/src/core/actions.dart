@@ -13,4 +13,7 @@ class Decrease extends Action {
 }
 
 class OpenDetail extends Action {}
+
 class OpenHome extends Action {}
+
+class Finish extends Action {}
