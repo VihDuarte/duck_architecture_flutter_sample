@@ -61,44 +61,46 @@ class FirstButtonCardViewState extends State<FirstBottomCardView>
     ];
 
     return Container(
-      alignment: Alignment.bottomCenter,
-      child: Container(
-        color: Colors.black,
-        constraints: BoxConstraints.expand(height: 150),
-        child: Stack(
-          children: <Widget>[
-            Positioned(
-              child: Align(
-                alignment: Alignment.center,
-                child: Stack(
-                  children: widgets,
-                ),
-              ),
-            ),
-            Positioned(
-              child: Align(
-                alignment: Alignment.centerRight,
-                child: RaisedButton(
-                  child: Text(
-                    ">",
-                    style: TextStyle(fontSize: 30),
+        alignment: Alignment.bottomCenter,
+        child: Hero(
+          tag: "tag",
+          child: Container(
+            color: Colors.black,
+            constraints: BoxConstraints.expand(height: 150),
+            child: Stack(
+              children: <Widget>[
+                Positioned(
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Stack(
+                      children: widgets,
+                    ),
                   ),
-                  onPressed: () {
-                    setState(() {
-                      if (index == 2) {
-                        widget._onFinishSubject.add(Object);
-                      } else {
-                        upController.forward();
-                      }
-                    });
-                  },
                 ),
-              ),
+                Positioned(
+                  child: Align(
+                    alignment: Alignment.centerRight,
+                    child: RaisedButton(
+                      child: Text(
+                        ">",
+                        style: TextStyle(fontSize: 30),
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          if (index == 2) {
+                            widget._onFinishSubject.add(Object);
+                          } else {
+                            upController.forward();
+                          }
+                        });
+                      },
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
-    );
+          ),
+        ));
   }
 
   Widget _buildFirstCard() {
